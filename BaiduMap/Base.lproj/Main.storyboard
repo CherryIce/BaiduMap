@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D21-jD-Fxg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--测试百度地图-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQA-Np-Xl2">
+                                <rect key="frame" x="100" y="164" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="33c-1Z-gBE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="百度定位">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="s8x-0O-3H0" kind="show" id="Uqh-yH-ZSm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDs-7I-4em">
+                                <rect key="frame" x="100" y="264" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1dM-R2-XeM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="addAnnotations">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="awN-0O-fW7" kind="show" id="g1u-oy-NyS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-6H-VmW">
+                                <rect key="frame" x="100" y="364" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sYF-nl-U7Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="导航">
+                                    <color key="titleColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="l6a-Tr-QgK" kind="show" id="Nbe-rV-sdO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vQA-Np-Xl2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="2Tu-PD-KY7"/>
+                            <constraint firstItem="oRa-6H-VmW" firstAttribute="top" secondItem="fDs-7I-4em" secondAttribute="bottom" constant="50" id="7Rp-XU-p5c"/>
+                            <constraint firstItem="oRa-6H-VmW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="UDQ-11-fR6"/>
+                            <constraint firstItem="fDs-7I-4em" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="aNx-f3-Bqj"/>
+                            <constraint firstItem="vQA-Np-Xl2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="dgf-gV-XAp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRa-6H-VmW" secondAttribute="trailing" constant="100" id="gv7-D3-6Dd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fDs-7I-4em" secondAttribute="trailing" constant="100" id="huP-8l-3uz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vQA-Np-Xl2" secondAttribute="trailing" constant="100" id="yCb-bu-LY7"/>
+                            <constraint firstItem="fDs-7I-4em" firstAttribute="top" secondItem="vQA-Np-Xl2" secondAttribute="bottom" constant="50" id="z03-m7-JXd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="测试百度地图" id="JOb-e1-GBN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440.80000000000001" y="115.59220389805098"/>
+        </scene>
+        <!--多地址显示-->
+        <scene sceneID="uQh-Nm-snD">
+            <objects>
+                <viewController id="awN-0O-fW7" customClass="AddAnnoationsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RBh-r6-eLf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="SfW-59-yRd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="多地址显示" id="wgd-Nj-jVg"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kng-Wa-dUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="836"/>
+        </scene>
+        <!--测试百度导航-->
+        <scene sceneID="LEM-Mp-dFR">
+            <objects>
+                <viewController id="l6a-Tr-QgK" customClass="PhoneGpsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRy-lj-GZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BBk-Ct-Sfa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试百度导航" id="g2r-Um-wvG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbn-BW-yNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="835"/>
+        </scene>
+        <!--测试定位-->
+        <scene sceneID="oif-j0-X4n">
+            <objects>
+                <viewController id="s8x-0O-3H0" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hew-r9-xEK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-Yk-j2b">
+                                <rect key="frame" x="50" y="114" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.47843137250000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uw0-p7-s8R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="开始定位"/>
+                                <connections>
+                                    <action selector="showStartLocation:" destination="s8x-0O-3H0" eventType="touchUpInside" id="qpb-e8-iqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icv-yC-8oQ">
+                                <rect key="frame" x="50" y="214" width="275" height="50"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.47843137250000001" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Th9-sc-i5u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="停止定位">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showStopLocation:" destination="s8x-0O-3H0" eventType="touchUpInside" id="wUA-Iw-0ew"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Icv-yC-8oQ" firstAttribute="leading" secondItem="cra-Th-K5J" secondAttribute="leading" constant="50" id="Ls8-cs-F6c"/>
+                            <constraint firstItem="cra-Th-K5J" firstAttribute="trailing" secondItem="U9O-Yk-j2b" secondAttribute="trailing" constant="50" id="Thz-f2-sy1"/>
+                            <constraint firstItem="U9O-Yk-j2b" firstAttribute="leading" secondItem="cra-Th-K5J" secondAttribute="leading" constant="50" id="kid-cr-t4W"/>
+                            <constraint firstItem="Icv-yC-8oQ" firstAttribute="top" secondItem="U9O-Yk-j2b" secondAttribute="bottom" constant="50" id="ndT-fY-Lhd"/>
+                            <constraint firstItem="cra-Th-K5J" firstAttribute="trailing" secondItem="Icv-yC-8oQ" secondAttribute="trailing" constant="50" id="qD2-TU-DdU"/>
+                            <constraint firstItem="U9O-Yk-j2b" firstAttribute="top" secondItem="cra-Th-K5J" secondAttribute="top" constant="50" id="ucb-Zq-HvU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cra-Th-K5J"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试定位" id="rvs-vh-PTs"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ns-Vj-YxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165.5999999999999" y="115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f46-Ar-awC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D21-jD-Fxg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7nX-x9-hZ5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZZc-yE-cre"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KM-hr-gOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="117"/>
         </scene>
     </scenes>
 </document>

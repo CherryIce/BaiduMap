@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+
+#define APPID @"10448362"
+#define APIKey @"suaP5V8vhvudC6QKCXLQcAYMfMYgdQjL"
+#define SecretKey @"AgNVd1BjEfM0YA9Ft1WR3f5Pu0mTyvpN"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BMKGeneralDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
